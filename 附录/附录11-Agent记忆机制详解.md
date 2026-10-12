@@ -1351,216 +1351,57 @@ MemGPT 的分层上下文思想可作为理解历史设计的参考，但论文�
 
 一个可发布的方案，不只需要“记得多”，还需要**有依据地记、在正确范围内用、随事实变化更新、按请求停止使用，并有可重复的证据证明收益与风险边界**。
 
-
 ---
 
 <a id="references"></a>
 
-## 11.21 参考资料与版本说明
-
-以下均为官方产品文档、研究论文页面或官方统计文档；访问核查日期统一为 **2026-10-10**。动态文档不保证未来仍保持相同接口。未从论文摘要推导厂商性能排名，也未用预览功能替代部署验证。
-
-<a id="r01"></a>
-
-**R01 · LangChain：Memory overview**  
-[来源页面](https://docs.langchain.com/oss/python/concepts/memory)  
-框架概念；线程与跨线程记忆。
-
-<a id="r02"></a>
-
-**R02 · LangMem：Background memory processing**  
-[来源页面](https://langchain-ai.github.io/langmem/background_quickstart/)  
-工具路径、后台记忆与示例存储。
-
-<a id="r03"></a>
-
-**R03 · Google ADK：Memory**  
-[来源页面](https://adk.dev/sessions/memory/)  
-当前官方重定向目的页；Memory Bank 与 RAG，以及直接创建／归并区别。
-
-<a id="r04"></a>
-
-**R04 · OpenAI Agents SDK：Sessions**  
-[来源页面](https://openai.github.io/openai-agents-python/sessions/)  
-Session 历史管理；不代表整个 SDK 全部能力。
-
-<a id="r05"></a>
-
-**R05 · AWS：AgentCore Memory strategies**  
-[来源页面](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-strategies.html)  
-策略驱动的提取与整理。
-
-<a id="r06"></a>
-
-**R06 · Microsoft Foundry：What is Memory?**  
-[来源页面](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-memory)  
-核查时为 public preview；以实际支持范围为准。
-
-<a id="r07"></a>
-
-**R07 · Mem0：How it works**  
-[来源页面](https://docs.mem0.ai/core-concepts/how-it-works)  
-当前自动提取路径与显式管理；需区分版本及产品形态。
-
-<a id="r08"></a>
-
-**R08 · Graphiti：Overview**  
-[来源页面](https://help.getzep.com/graphiti/getting-started/overview)  
-时间、episode、实体关系和检索机制。
-
-<a id="r09"></a>
-
-**R09 · Letta V1 SDK：Stateful agents（legacy）**  
-[来源页面](https://docs.letta.com/v1-sdk/concepts/stateful-agents/)  
-旧版概念，仅用于辨别版本差异。
-
-<a id="r10"></a>
-
-**R10 · Letta Agent SDK：Memory**  
-[来源页面](https://docs.letta.com/agent-sdk/memory)  
-当前 MemFS、system 文件与后台整理。
-
-<a id="r11"></a>
-
-**R11 · CrewAI：Memory（版本化文档）**  
-[来源页面](https://docs.crewai.com/v1.15.27/en/concepts/memory)  
-所核查文档版本 v1.15.27，不代表任意旧版行为。
-
-<a id="r12"></a>
-
-**R12 · Claude Code：Manage Claude’s memory**  
-[来源页面](https://code.claude.com/docs/en/memory)  
-CLAUDE.md 与 Auto Memory。
-
-<a id="r13"></a>
-
-**R13 · Codex：Memories**  
-[来源页面](https://learn.chatgpt.com/docs/customization/memories?surface=app)  
-当前官方重定向目的页；本地记忆生成与控制。
-
-<a id="r14"></a>
-
-**R14 · Codex：AGENTS.md**  
-[来源页面](https://learn.chatgpt.com/docs/agent-configuration/agents-md)  
-持久项目指令。
-
-<a id="r15"></a>
-
-**R15 · Gemini CLI：save_memory 旧工具说明**  
-[来源页面](https://google-gemini.github.io/gemini-cli/docs/tools/memory.html)  
-旧说明指向全局 GEMINI.md；不得与当前机制混用。
-
-<a id="r16"></a>
-
-**R16 · Gemini CLI：Memory files**  
-[来源页面](https://geminicli.com/docs/tools/memory/)  
-当前共享项目／私有项目／全局文件路径；页面标注更新于 2026-05-13。
-
-<a id="r17"></a>
-
-**R17 · GitHub Copilot：About Copilot Memory**  
-[来源页面](https://docs.github.com/en/copilot/concepts/agents/copilot-memory)  
-核查时 public preview；仓库事实、个人偏好与引用验证。
-
-<a id="r18"></a>
-
-**R18 · Cursor：Cloud Automations**  
-[来源页面](https://cursor.com/docs/cloud-agent/automations)  
-同一自动化跨运行记忆；不可泛化为账户全局记忆。
-
-<a id="r19"></a>
-
-**R19 · OpenCode：Rules**  
-[来源页面](https://opencode.ai/docs/rules/)  
-AGENTS.md 与规则加载。
-
-<a id="r20"></a>
-
-**R20 · OpenCode：Agent Skills**  
-[来源页面](https://opencode.ai/docs/skills/)  
-按需读取的 SKILL.md 指令。
-
-<a id="r21"></a>
-
-**R21 · CoALA：Cognitive Architectures for Language Agents**  
-[来源页面](https://arxiv.org/abs/2309.02427)  
-研究论文；概念分类参考。
-
-<a id="r22"></a>
-
-**R22 · MemGPT：Towards LLMs as Operating Systems**  
-[来源页面](https://arxiv.org/abs/2310.08560)  
-研究论文；分层上下文思想，不等于当前产品接口。
-
-<a id="r23"></a>
-
-**R23 · LongMemEval：Benchmarking Chat Assistants on Long-Term Interactive Memory**  
-[来源页面](https://arxiv.org/abs/2410.10813)  
-长期交互记忆评测。
-
-<a id="r24"></a>
-
-**R24 · LoCoMo：Evaluating Very Long-Term Conversational Memory of LLM Agents**  
-[来源页面](https://arxiv.org/abs/2402.17753)  
-长对话与跨会话任务。
-
-<a id="r25"></a>
-
-**R25 · Guo et al.：On Calibration of Modern Neural Networks**  
-[来源页面](https://proceedings.mlr.press/v70/guo17a.html)  
-ICML 2017；概率校准研究。
-
-<a id="r26"></a>
-
-**R26 · scikit-learn：Probability calibration**  
-[来源页面](https://scikit-learn.org/stable/modules/calibration.html)  
-校准评估、可靠性图和 Brier 的解释边界。
-
-<a id="r27"></a>
-
-**R27 · OWASP：AI Agent Security Cheat Sheet**  
-[来源页面](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)  
-Agent 风险和防护建议。
-
-<a id="r28"></a>
-
-**R28 · OWASP：LLM Prompt Injection Prevention**  
-[来源页面](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)  
-提示注入与分层防护。
-
-<a id="r29"></a>
-
-**R29 · Microsoft Research：Diagnosing Sample Ratio Mismatch in A/B Testing**  
-[来源页面](https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/)  
-分流偏差、选择问题与实验可信度。
-
-<a id="r30"></a>
-
-**R30 · MemBench：Towards More Comprehensive Evaluation on the Memory of LLM-based Agents**  
-[来源页面](https://aclanthology.org/2025.findings-acl.989/)  
-ACL Findings 2025；事实／反思记忆与效率评估。
-
-<a id="r31"></a>
-
-**R31 · LongMemEval-V2**  
-[来源页面](https://arxiv.org/abs/2605.12493)  
-所核查版本标注 work in progress；经验问答，不是 Coding 任务执行榜。
-
-<a id="r32"></a>
-
-**R32 · statsmodels：mcnemar**  
-[来源页面](https://www.statsmodels.org/stable/generated/statsmodels.stats.contingency_tables.mcnemar.html)  
-配对二元检验官方实现。
-
-<a id="r33"></a>
-
-**R33 · statsmodels：NormalIndPower.solve_power**  
-[来源页面](https://www.statsmodels.org/stable/generated/statsmodels.stats.power.NormalIndPower.solve_power.html)  
-功效分析所需参数；本文样本量示例另明确给出近似公式。
-
-<a id="r34"></a>
-
-**R34 · SciPy：BinomTestResult.proportion_ci**  
-[来源页面](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html)  
-二项比例区间官方实现。
+## 参考资料
+
+> 以下均为官方产品文档、研究论文页面或官方统计文档，访问核查日期统一为 **2026-10-10**。动态文档不保证未来仍保持相同接口；未从论文摘要推导厂商性能排名，也未用预览功能替代部署验证。
+
+### Agent 框架与记忆服务
+
+1. <a id="r01"></a> **R01 · [LangChain：Memory overview](https://docs.langchain.com/oss/python/concepts/memory)**——框架概念；线程与跨线程记忆。
+2. <a id="r02"></a> **R02 · [LangMem：Background memory processing](https://langchain-ai.github.io/langmem/background_quickstart/)**——工具路径、后台记忆与示例存储。
+3. <a id="r03"></a> **R03 · [Google ADK：Memory](https://adk.dev/sessions/memory/)**——当前官方重定向目的页；Memory Bank 与 RAG，以及直接创建／归并区别。
+4. <a id="r04"></a> **R04 · [OpenAI Agents SDK：Sessions](https://openai.github.io/openai-agents-python/sessions/)**——Session 历史管理；不代表整个 SDK 全部能力。
+5. <a id="r05"></a> **R05 · [AWS：AgentCore Memory strategies](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/memory-strategies.html)**——策略驱动的提取与整理。
+6. <a id="r06"></a> **R06 · [Microsoft Foundry：What is Memory?](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/what-is-memory)**——核查时为 public preview；以实际支持范围为准。
+7. <a id="r07"></a> **R07 · [Mem0：How it works](https://docs.mem0.ai/core-concepts/how-it-works)**——当前自动提取路径与显式管理；需区分版本及产品形态。
+8. <a id="r08"></a> **R08 · [Graphiti：Overview](https://help.getzep.com/graphiti/getting-started/overview)**——时间、episode、实体关系和检索机制。
+9. <a id="r09"></a> **R09 · [Letta V1 SDK：Stateful agents（legacy）](https://docs.letta.com/v1-sdk/concepts/stateful-agents/)**——旧版概念，仅用于辨别版本差异。
+10. <a id="r10"></a> **R10 · [Letta Agent SDK：Memory](https://docs.letta.com/agent-sdk/memory)**——当前 MemFS、system 文件与后台整理。
+11. <a id="r11"></a> **R11 · [CrewAI：Memory（版本化文档）](https://docs.crewai.com/v1.15.27/en/concepts/memory)**——所核查文档版本 v1.15.27，不代表任意旧版行为。
+
+### Coding Agent 的记忆与规则
+
+12. <a id="r12"></a> **R12 · [Claude Code：Manage Claude’s memory](https://code.claude.com/docs/en/memory)**——CLAUDE.md 与 Auto Memory。
+13. <a id="r13"></a> **R13 · [Codex：Memories](https://learn.chatgpt.com/docs/customization/memories?surface=app)**——当前官方重定向目的页；本地记忆生成与控制。
+14. <a id="r14"></a> **R14 · [Codex：AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)**——持久项目指令。
+15. <a id="r15"></a> **R15 · [Gemini CLI：save_memory 旧工具说明](https://google-gemini.github.io/gemini-cli/docs/tools/memory.html)**——旧说明指向全局 GEMINI.md；不得与当前机制混用。
+16. <a id="r16"></a> **R16 · [Gemini CLI：Memory files](https://geminicli.com/docs/tools/memory/)**——当前共享项目／私有项目／全局文件路径；页面标注更新于 2026-05-13。
+17. <a id="r17"></a> **R17 · [GitHub Copilot：About Copilot Memory](https://docs.github.com/en/copilot/concepts/agents/copilot-memory)**——核查时 public preview；仓库事实、个人偏好与引用验证。
+18. <a id="r18"></a> **R18 · [Cursor：Cloud Automations](https://cursor.com/docs/cloud-agent/automations)**——同一自动化跨运行记忆；不可泛化为账户全局记忆。
+19. <a id="r19"></a> **R19 · [OpenCode：Rules](https://opencode.ai/docs/rules/)**——AGENTS.md 与规则加载。
+20. <a id="r20"></a> **R20 · [OpenCode：Agent Skills](https://opencode.ai/docs/skills/)**——按需读取的 SKILL.md 指令。
+
+### 基础理论与记忆评测
+
+21. <a id="r21"></a> **R21 · [CoALA：Cognitive Architectures for Language Agents](https://arxiv.org/abs/2309.02427)**——研究论文；概念分类参考。
+22. <a id="r22"></a> **R22 · [MemGPT：Towards LLMs as Operating Systems](https://arxiv.org/abs/2310.08560)**——研究论文；分层上下文思想，不等于当前产品接口。
+23. <a id="r23"></a> **R23 · [LongMemEval：Benchmarking Chat Assistants on Long-Term Interactive Memory](https://arxiv.org/abs/2410.10813)**——长期交互记忆评测。
+24. <a id="r24"></a> **R24 · [LoCoMo：Evaluating Very Long-Term Conversational Memory of LLM Agents](https://arxiv.org/abs/2402.17753)**——长对话与跨会话任务。
+25. <a id="r25"></a> **R25 · [Guo et al.：On Calibration of Modern Neural Networks](https://proceedings.mlr.press/v70/guo17a.html)**——ICML 2017；概率校准研究。
+26. <a id="r26"></a> **R26 · [scikit-learn：Probability calibration](https://scikit-learn.org/stable/modules/calibration.html)**——校准评估、可靠性图和 Brier 的解释边界。
+
+### 安全、实验与统计方法
+
+27. <a id="r27"></a> **R27 · [OWASP：AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)**——Agent 风险和防护建议。
+28. <a id="r28"></a> **R28 · [OWASP：LLM Prompt Injection Prevention](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html)**——提示注入与分层防护。
+29. <a id="r29"></a> **R29 · [Microsoft Research：Diagnosing Sample Ratio Mismatch in A/B Testing](https://www.microsoft.com/en-us/research/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/)**——分流偏差、选择问题与实验可信度。
+30. <a id="r30"></a> **R30 · [MemBench：Towards More Comprehensive Evaluation on the Memory of LLM-based Agents](https://aclanthology.org/2025.findings-acl.989/)**——ACL Findings 2025；事实／反思记忆与效率评估。
+31. <a id="r31"></a> **R31 · [LongMemEval-V2](https://arxiv.org/abs/2605.12493)**——所核查版本标注 work in progress；经验问答，不是 Coding 任务执行榜。
+32. <a id="r32"></a> **R32 · [statsmodels：mcnemar](https://www.statsmodels.org/stable/generated/statsmodels.stats.contingency_tables.mcnemar.html)**——配对二元检验官方实现。
+33. <a id="r33"></a> **R33 · [statsmodels：NormalIndPower.solve_power](https://www.statsmodels.org/stable/generated/statsmodels.stats.power.NormalIndPower.solve_power.html)**——功效分析所需参数；本文样本量示例另明确给出近似公式。
+34. <a id="r34"></a> **R34 · [SciPy：BinomTestResult.proportion_ci](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html)**——二项比例区间官方实现。
 
